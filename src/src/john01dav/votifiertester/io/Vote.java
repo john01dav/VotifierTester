@@ -34,7 +34,7 @@ public class Vote implements Serializable{
         EncryptionHandler encryptionHandler;
         int port;
 
-        String voteData = "VOTE\n" + serviceName + "\n" + username + "\n" + userIP + "\n";
+        String voteData = "VOTE\n" + serviceName + "\n" + username + "\n" + userIP + "\n" + (System.currentTimeMillis()/1000L) + "\n";
 
 
         byte[] rawData = voteData.getBytes(Charset.forName("UTF-8"));
